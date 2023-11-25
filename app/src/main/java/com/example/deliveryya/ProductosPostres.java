@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.deliveryya.models.Producto;
-import com.example.deliveryya.models.ProductosAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
 public class ProductosPostres extends AppCompatActivity {
 
     private RecyclerView recyclerView;
-    private ProductosAdapter productosAdapter;
+
     private List<Producto> listaProductos;
 
     @Override
@@ -21,7 +20,7 @@ public class ProductosPostres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
 
-        recyclerView = findViewById(R.id.recyclerViewProductos);
+
         listaProductos = new ArrayList<>();
 
 
@@ -29,8 +28,6 @@ public class ProductosPostres extends AppCompatActivity {
         listaProductos.add(new Producto("Producto 2", "Descripción 2", 2, 19.99));
         listaProductos.add(new Producto("Producto 3", "Descripción 3", 3, 5.99));
 
-        productosAdapter = new ProductosAdapter(listaProductos);
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(productosAdapter);
+
     }
 }
