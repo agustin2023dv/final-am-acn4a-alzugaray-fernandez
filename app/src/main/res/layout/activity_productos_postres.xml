@@ -42,4 +42,59 @@
     </LinearLayout>
 
 
+    <LinearLayout
+        android:id="@+id/layoutProducto"
+        android:layout_width="149dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="128dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Imagen -->
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtNombreProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_helado_vainilla"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/txtDescripcionProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_helado_vainilla"
+            android:textSize="14sp" />
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/txtPrecioProducto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/precio_helado_vainilla"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Espacio entre elementos -->
+
+        <!-- Botón "Comprar" -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/btnComprarHeladoVainilla"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/boton_comprar" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
