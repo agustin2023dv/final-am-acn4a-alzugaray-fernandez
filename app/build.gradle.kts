@@ -4,12 +4,14 @@ plugins {
 
 android {
     namespace = "com.example.deliveryya"
-    compileSdk = 33
+    compileSdk = 34
+
 
     defaultConfig {
         applicationId = "com.example.deliveryya"
         minSdk = 17
-        targetSdk = 33
+        //noinspection EditedTargetSdkVersion
+        targetSdk = 34
         versionCode = 1
         versionName = "1.0"
 

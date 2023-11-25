@@ -2,7 +2,9 @@ package com.example.deliveryya;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -14,16 +16,21 @@ import java.util.List;
 
 public class ProductosPostres extends AppCompatActivity {
 
-    private RecyclerView recyclerView;
-
-    private List<Producto> listaProductos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
 
-        View layoutProductoView = findViewById(R.id.layoutProducto);
+
+        Button btnComprarHeladoVainilla = findViewById(R.id.btnComprarHeladoVainilla);
+        btnComprarHeladoVainilla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Maneja el evento de clic del botón aquí
+                Toast.makeText(ProductosPostres.this, "Has comprado Helado de Vainilla", Toast.LENGTH_SHORT).show();
+            }
+        });
 
 
     }
