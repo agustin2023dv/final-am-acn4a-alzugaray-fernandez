@@ -17,15 +17,23 @@
     <string name="boton_comprar">Comprar</string>
 
 
-
+     <!-- POSTRES -->
     <string name="boton_helado_vainilla">Helado de vainilla</string>
     <string name="descripcion_helado_vainilla">Descripcion helado de vainilla</string>
     <string name="precio_helado_vainilla">1000</string>
 
     <string name="boton_helado_chocolate">Helado de chocolate</string>
-    <string name="boton_tiramisu">Tiramisu</string>
-    <string name="boton_helado_frutilla">Helado de frutilla</string>
+    <string name="descripcion_helado_chocolate">Descripcion helado de chocolate</string>
+    <string name="precio_helado_chocolate">1300</string>
 
+    <string name="boton_tiramisu">Tiramisu</string>
+    <string name="descripcion_tiramisu">Descripcion de tiramisu</string>
+    <string name="precio_tiramisuo">1700</string>
+
+
+    <string name="boton_helado_frutilla">Helado de frutilla</string>
+    <string name="descripcion_helado_frutilla">Descripcion helado de frutilla</string>
+    <string name="precio_helado_frutilla">1200</string>
 
 
 

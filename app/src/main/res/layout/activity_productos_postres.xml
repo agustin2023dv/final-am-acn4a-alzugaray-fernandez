@@ -43,12 +43,12 @@
 
 
     <LinearLayout
-        android:id="@+id/layoutProducto"
+        android:id="@+id/layoutHeladoVainilla"
         android:layout_width="149dp"
         android:layout_height="135dp"
         android:layout_gravity="center"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="160dp"
         android:orientation="vertical"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -57,7 +57,7 @@
 
         <!-- Título -->
         <TextView
-            android:id="@+id/txtNombreProducto"
+            android:id="@+id/txtNombreHeladoVainilla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/boton_helado_vainilla"
@@ -66,7 +66,7 @@
 
         <!-- Descripción -->
         <TextView
-            android:id="@+id/txtDescripcionProducto"
+            android:id="@+id/txtDescripcionHeladoVainilla"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/descripcion_helado_vainilla"
@@ -74,7 +74,7 @@
 
         <!-- Precio -->
         <TextView
-            android:id="@+id/txtPrecioProducto"
+            android:id="@+id/txtPrecioHeladoVainilla"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/precio_helado_vainilla"
@@ -96,5 +96,58 @@
             android:text="@string/boton_comprar" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/layoutHeladoChocolate"
+        android:layout_width="149dp"
+        android:layout_height="135dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="208dp"
+        android:layout_marginTop="160dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Imagen -->
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/txtNombreHeladoChocolate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/boton_helado_chocolate"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Descripción -->
+        <TextView
+            android:id="@+id/txtDescripcionHeladoChocolate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion_helado_chocolate"
+            android:textSize="14sp" />
+
+        <!-- Precio -->
+        <TextView
+            android:id="@+id/txtPrecioHeladoChocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/precio_helado_chocolate"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Espacio entre elementos -->
+
+        <!-- Botón "Comprar" -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="8dp" />
+
+        <Button
+            android:id="@+id/btnComprarHeladoChocolate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/boton_comprar" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

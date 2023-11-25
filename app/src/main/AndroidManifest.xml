@@ -17,7 +17,7 @@
             android:exported="true" />
         <activity
             android:name=".CarritoCompras"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".Landing"
             android:exported="true" />
