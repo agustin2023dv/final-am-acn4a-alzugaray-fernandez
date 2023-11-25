@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Delivery Ya</string>
+
+    <string name="texto_landing">Descubre restaurantes cerca tuyo</string>
+    <string name="boton_continuar">Continuar</string>
+
+    <string name="buscador">¿Qué estás buscando?</string>
+    <string name="titulo_menu">Ordene su comida aqui</string>
+    <string name="boton_postres">Postres</string>
+    <string name="boton_pizzas">Pizzas</string>
+    <string name="boton_hamburgesas">Hamburgesas</string>
+    <string name="boton_parrillas">Parrillas</string>
+    <string name="boton_helados">Helados</string>
+    <string name="boton_panaderia">Panaderia</string>
+
+
+    <string name="boton_comprar">Comprar</string>
+
+    <string name="boton_helado_vainilla">Helado de vainilla</string>
+    <string name="boton_helado_chocolate">Helado de chocolate</string>
+    <string name="boton_tiramisu">Tiramisu</string>
+    <string name="boton_helado_frutilla">Helado de frutilla</string>
+
+    <string name="title_home">Inicio</string>
+    <string name="title_dashboard">Tablero</string>
+    <string name="title_notifications">Notificaciones</string>
+    <string name="title_activity_carrito_compras">CarritoCompras</string>
+</resources>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Añade un LinearLayout para envolver los elementos con márgenes superiores -->
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp">
+
+            <!-- Elemento de logo -->
+            <ImageView
+                android:id="@+id/logoImageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:id="@+id/appNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Ya"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <!-- "Inicia sesión para continuar" con margen inferior -->
+            <TextView
+                android:id="@+id/instructionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Inicia sesión para continuar"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35dp" />
+
+            <!-- Campo de correo electrónico con fondo personalizado -->
+            <EditText
+                android:id="@+id/emailEditText"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_edittext_background"/>
+
+            <!-- Campo de contraseña con fondo personalizado -->
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/custom_edittext_background" />
+
+            <!-- Botón de inicio de sesión -->
+            <Button
+                android:id="@+id/loginButton"
+                android:textColor="@color/white"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Iniciar Sesión"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="@color/color_principal"/>
+
+            <!-- "Olvidé mi contraseña" -->
+            <TextView
+                android:id="@+id/forgotPasswordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Olvidé mi contraseña"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:onClick="forgotPasswordClick"
+                android:background="?android:selectableItemBackground"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"/>
+
+            <!-- "Crear una cuenta nueva" -->
+            <TextView
+                android:id="@+id/createAccountTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Crear una cuenta nueva"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:onClick="createAccountClick"
+                android:background="?android:selectableItemBackground"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"/>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
