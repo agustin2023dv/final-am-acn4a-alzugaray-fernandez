@@ -1,7 +1,7 @@
 package com.example.deliveryya;
 
 import androidx.appcompat.app.AppCompatActivity;
-
+import android.widget.ImageView;
 import android.os.Bundle;
 
 import android.widget.TextView;
@@ -16,6 +16,22 @@ public class CarritoCompras extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrito_compras);
+
+
+
+        ImageView iconoAtras = findViewById(R.id.iconoAtras);
+
+        iconoAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
+            }
+        });
+
+
+
+
+
 
 
         Button btnMenos = findViewById(R.id.btnMenos);
