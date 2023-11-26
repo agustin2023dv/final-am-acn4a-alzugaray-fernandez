@@ -49,59 +49,93 @@
     </LinearLayout>
 
 
-    <LinearLayout
-        android:id="@+id/layoutHeladoVainilla"
-        android:layout_width="149dp"
-        android:layout_height="135dp"
-        android:layout_gravity="center"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="160dp"
-        android:orientation="vertical"
+    <!-- Card para Helado de Vainilla -->
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHeladoVainilla"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_columnSpan="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_rowSpan="1">
 
-        <!-- Imagen -->
-
-        <!-- Título -->
-        <TextView
-            android:id="@+id/txtNombreHeladoVainilla"
+        <!-- Contenedor principal con ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/boton_helado_vainilla"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:layout_height="match_parent">
 
-        <!-- Descripción -->
-        <TextView
-            android:id="@+id/txtDescripcionHeladoVainilla"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/descripcion_helado_vainilla"
-            android:textSize="14sp" />
+            <!-- Imagen -->
+            <ImageView
+                android:id="@+id/imgHeladoVainilla"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/descripcion_imagen_helado_vainilla"
+                android:scaleType="centerCrop"
+                android:src="@drawable/helado_vainilla"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Precio -->
-        <TextView
-            android:id="@+id/txtPrecioHeladoVainilla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/precio_helado_vainilla"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            <!-- Nombre del helado -->
+            <TextView
+                android:id="@+id/txtNombreHeladoVainilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/boton_helado_vainilla"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgHeladoVainilla" />
 
-        <!-- Espacio entre elementos -->
+            <!-- Descripción del helado -->
+            <TextView
+                android:id="@+id/txtDescripcionHeladoVainilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/descripcion_helado_vainilla"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreHeladoVainilla" />
 
-        <!-- Botón "Comprar" -->
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="8dp" />
+            <!-- Precio del helado -->
+            <TextView
+                android:id="@+id/txtPrecioHeladoVainilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/precio_helado_vainilla"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescripcionHeladoVainilla" />
 
-        <Button
-            android:id="@+id/btnComprarHeladoVainilla"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/boton_comprar" />
-    </LinearLayout>
+            <!-- Botón de comprar -->
+            <Button
+                android:id="@+id/btnComprarHeladoVainilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/color_principal"
+                android:onClick="irACarritoCompras"
+                android:text="@string/boton_comprar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrecioHeladoVainilla" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
     <LinearLayout
         android:id="@+id/layoutHeladoChocolate"
@@ -159,13 +193,15 @@
 
 
     <!-- CardView para Helado de Frutilla -->
+
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoFrutilla"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="330dp"
+        android:layout_marginTop="350dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:layout_columnSpan="1"
@@ -243,8 +279,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtPrecioHeladoFrutilla" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-
 
     <LinearLayout
         android:id="@+id/layoutFooter"

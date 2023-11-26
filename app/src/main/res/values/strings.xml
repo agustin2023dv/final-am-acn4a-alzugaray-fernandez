@@ -21,6 +21,7 @@
     <string name="boton_helado_vainilla">Helado de vainilla</string>
     <string name="descripcion_helado_vainilla">Descripcion helado de vainilla</string>
     <string name="precio_helado_vainilla">1000</string>
+    <string name="descripcion_imagen_helado_vainilla">Helado de vainilla</string>
 
     <string name="boton_helado_chocolate">Helado de chocolate</string>
     <string name="descripcion_helado_chocolate">Descripcion helado de chocolate</string>
