@@ -8,15 +8,24 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.deliveryya.models.Producto;
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class ProductosPostres extends AppCompatActivity {
+
+    /*MENU DESPLEGABLE*/
+
+
+
+
 
     List<Producto> carritoCompras = new ArrayList<Producto>();
     @Override
@@ -27,7 +36,7 @@ public class ProductosPostres extends AppCompatActivity {
 
         ImageView imgCart = findViewById(R.id.img_cart);
 
-        // Configurar un clic en el ImageView
+
         imgCart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
