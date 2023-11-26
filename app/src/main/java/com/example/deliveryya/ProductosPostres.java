@@ -18,6 +18,7 @@ import java.util.List;
 public class ProductosPostres extends AppCompatActivity {
 
 
+    ImageView perfilUsuario ;
 
     private List<Producto> carritoCompras = new ArrayList<>();
 
@@ -26,6 +27,19 @@ public class ProductosPostres extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
+
+
+        perfilUsuario = findViewById(R.id.iconoUser);
+
+        perfilUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProductosPostres.this, UserDashboard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
 
 
         ImageView imgCart = findViewById(R.id.img_cart);
@@ -48,6 +62,12 @@ public class ProductosPostres extends AppCompatActivity {
         btnComprarHeladoVainilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
+
+
 
 
                TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoVainilla);

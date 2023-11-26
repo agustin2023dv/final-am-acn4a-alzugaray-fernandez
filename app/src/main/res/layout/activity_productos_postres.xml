@@ -397,15 +397,24 @@
     <LinearLayout
         android:id="@+id/layoutFooter"
         android:layout_width="409dp"
-        android:layout_height="33dp"
+        android:layout_height="40dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="696dp"
+        android:layout_marginTop="690dp"
         android:layout_marginEnd="8dp"
+        android:background="#F3E1E1"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
+
+        <ImageView
+            android:id="@+id/iconoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/user">
+
+        </ImageView>
 
     </LinearLayout>
 
