@@ -7,13 +7,11 @@ import android.os.Bundle;
 import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
-import com.example.deliveryya.models.Producto;
-
-import java.util.List;
 
 public class CarritoCompras extends AppCompatActivity {
 
     private int cantidadHVainilla = 0; //
+    private double precioTotal = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,16 +28,21 @@ public class CarritoCompras extends AppCompatActivity {
 
         TextView txtNombreProducto = findViewById(R.id.txtNombreProducto);
         TextView txtDescProducto = findViewById(R.id.txtDescripcionProducto);
-        TextView txtPrecioProducto = findViewById(R.id.txtPrecioProducto);
+        TextView txtPrecioHVainilla = findViewById(R.id.txtPrecioProducto);
+
+
+        TextView txtPrecioTotal = findViewById(R.id.txtValorTotal);
 
         TextView txtCantidadHVainilla = findViewById(R.id.txtCantidadHVainilla);
-
+        txtCantidadHVainilla.setText("1");
 
         // Establecer los datos del helado en las vistas
         txtNombreProducto.setText(nombreProducto);
         txtDescProducto.setText(descripcionProducto);
-        txtPrecioProducto.setText(String.valueOf(precioProducto));
+        txtPrecioHVainilla.setText(String.valueOf(precioProducto));
 
+        precioTotal += precioProducto;
+        txtPrecioTotal.setText(String.valueOf(precioTotal));
 
 
 
@@ -51,9 +54,13 @@ public class CarritoCompras extends AppCompatActivity {
                 if (cantidadHVainilla > 0) {
                     cantidadHVainilla--;
                     txtCantidadHVainilla.setText(String.valueOf(cantidadHVainilla));
+                    precioTotal -= precioProducto;
+                    txtPrecioTotal.setText(String.valueOf(precioTotal));;
                 }
                 else {
                     cantidadHVainilla = 0;
+                    precioTotal -= precioProducto;
+                    txtPrecioTotal.setText(String.valueOf(precioTotal));
                 }
             }
         });
@@ -65,6 +72,8 @@ public class CarritoCompras extends AppCompatActivity {
                 // Aumentar la cantidad en 1
                 cantidadHVainilla ++;
                 txtCantidadHVainilla.setText(String.valueOf(cantidadHVainilla));
+                precioTotal += precioProducto;
+                txtPrecioTotal.setText(String.valueOf(precioTotal));
             }
         });
 
