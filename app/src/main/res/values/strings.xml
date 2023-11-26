@@ -16,6 +16,10 @@
 
     <string name="boton_comprar">Comprar</string>
 
+    <string name="boton_menos">-</string>
+    <string name="boton_mas">+</string>
+    <string name="contador_valor_defecto">0</string>
+    <string name="precio_defecto">$0</string>
 
      <!-- POSTRES -->
     <string name="boton_helado_vainilla">Helado de vainilla</string>

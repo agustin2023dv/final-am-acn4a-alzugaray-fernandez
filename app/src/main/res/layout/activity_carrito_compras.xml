@@ -5,29 +5,112 @@
     android:layout_height="match_parent"
     tools:context=".CarritoCompras">
 
+    <LinearLayout
+        android:id="@+id/layoutHeader"
+        android:layout_width="409dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/txtNombreProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nombre del Producto"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="244dp" />
+        <ImageView
+            android:id="@+id/img_burgermenu"
+            android:layout_width="25dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:src="@drawable/burger_menu" />
 
-    <TextView
-        android:id="@+id/txtDescripcionProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Descripción del Producto"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="184dp" />
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
-    <TextView
-        android:id="@+id/txtPrecioProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Precio: $0.00"
-        tools:layout_editor_absoluteX="234dp"
-        tools:layout_editor_absoluteY="297dp" />
+        <ImageView
+            android:id="@+id/img_cart"
+            android:layout_width="25dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:src="@drawable/cart" />
+
+    </LinearLayout>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvProducto"
+        android:layout_width="188dp"
+        android:layout_height="197dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="422dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtNombreProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del Producto"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/txtDescripcionProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Descripción del Producto"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtPrecioProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/precio_defecto"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/layoutCantidades"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnMenos"
+                    android:layout_width="58dp"
+                    android:layout_height="35dp"
+                    android:text="@string/boton_menos" />
+
+                <TextView
+                    android:id="@+id/txtCantidadHVainilla"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/contador_valor_defecto"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnMas"
+                    android:layout_width="61dp"
+                    android:layout_height="35dp"
+                    android:text="@string/boton_mas" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

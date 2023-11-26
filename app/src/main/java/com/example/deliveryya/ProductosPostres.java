@@ -10,9 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
 import com.example.deliveryya.models.Producto;
 import com.google.android.material.navigation.NavigationView;
 
@@ -23,6 +21,7 @@ public class ProductosPostres extends AppCompatActivity {
 
 
 
+    private List<Producto> carritoCompras = new ArrayList<>();
 
 
     @Override
