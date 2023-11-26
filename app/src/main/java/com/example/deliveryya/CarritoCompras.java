@@ -8,10 +8,15 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
 
+
+
 public class CarritoCompras extends AppCompatActivity {
 
     private int cantidadHVainilla = 0; //
     private double precioTotal = 0;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +29,10 @@ public class CarritoCompras extends AppCompatActivity {
         iconoAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+
+
+
                 onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
             }
         });
@@ -98,8 +107,7 @@ public class CarritoCompras extends AppCompatActivity {
     }
 
 
-    }
-
+}
 
 
 

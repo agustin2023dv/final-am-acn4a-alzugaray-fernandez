@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    tools:context=".Registro">
 
     <ScrollView
         android:id="@+id/scrollView"
@@ -19,38 +19,41 @@
         <LinearLayout
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp">
 
             <!-- Elemento de logo -->
             <ImageView
                 android:id="@+id/logoImageView1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:src="@drawable/logo"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/logo" />
+                android:layout_marginBottom="15dp" />
 
             <TextView
                 android:id="@+id/appNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
                 android:text="Delivery Ya"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
 
             <!-- "Inicia sesión para continuar" con margen inferior -->
             <TextView
                 android:id="@+id/instructionTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="35dp"
                 android:text="Inicia sesión para continuar"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35dp" />
 
+            <!-- Email -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -58,13 +61,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
                     android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_height="wrap_content"
                     android:hint="@string/placeholder_correo_elecronico" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- Contraseña -->
-
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -78,27 +80,26 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <ProgressBar
-                android:id="@+id/progressBarLogin"
+                android:id="@+id/progressBarRegistro"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnRegistro"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dp"
                 android:background="@color/color_principal"
-                android:text="Iniciar Sesión"
+                android:text="Registrar"
                 android:textColor="@color/white" />
 
             <TextView
-                android:id="@+id/txtRegistrateAhora"
+                android:id="@+id/txtLoginAhora"
+                android:text="@string/usuario_recien_registrado"
                 android:layout_width="match_parent"
-                android:layout_height="97dp"
-                android:text="@string/registrarse" />
-
+                android:layout_height="match_parent"></TextView>
         </LinearLayout>
 
     </ScrollView>

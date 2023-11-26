@@ -8,11 +8,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.deliveryya.models.Producto;
-import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,9 +49,6 @@ public class ProductosPostres extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-   /*           Toast.makeText(ProductosPostres.this,
-                      "Has agregado Helado de Vainilla al carrito de compra", Toast.LENGTH_SHORT).show(); */
-
 
                TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoVainilla);
                 TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoVainilla);
@@ -68,6 +63,7 @@ public class ProductosPostres extends AppCompatActivity {
                 intent.putExtra("nombreProducto", txtNombreProducto.getText().toString());
                 intent.putExtra("descripcionProducto", txtDescProducto.getText().toString());
                 intent.putExtra("precioProducto", Double.parseDouble(txtPrecioProducto.getText().toString()));
+                intent.putExtra("cantidadHVainilla",1);
                 // Iniciar la actividad CarritoCompras
                 startActivity(intent);
             }

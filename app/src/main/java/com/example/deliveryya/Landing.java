@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
 public class Landing extends AppCompatActivity {
 
     @Override
@@ -16,12 +17,24 @@ public class Landing extends AppCompatActivity {
 
         Button btnContinuar = findViewById(R.id.btnContinuar);
 
+/*
 
         btnContinuar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Login.class);
+
+                Intent intent = new Intent(Landing.this, Registro.class);
                 startActivity(intent);
+                finish();
+            }
+        });*/
+
+        btnContinuar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Landing.this, Login.class);
+                startActivity(intent);
+                finish();
             }
         });
 
