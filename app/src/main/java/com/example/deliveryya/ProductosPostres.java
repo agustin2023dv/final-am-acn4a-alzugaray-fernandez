@@ -21,13 +21,10 @@ import java.util.List;
 
 public class ProductosPostres extends AppCompatActivity {
 
-    /*MENU DESPLEGABLE*/
 
 
 
 
-
-    List<Producto> carritoCompras = new ArrayList<Producto>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,8 +52,25 @@ public class ProductosPostres extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(ProductosPostres.this, "Has agregado Helado de Vainilla al carrito de compra", Toast.LENGTH_SHORT).show();
+   /*           Toast.makeText(ProductosPostres.this,
+                      "Has agregado Helado de Vainilla al carrito de compra", Toast.LENGTH_SHORT).show(); */
 
+
+               TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoVainilla);
+                TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoVainilla);
+                TextView txtPrecioProducto = findViewById(R.id.txtPrecioHeladoVainilla);
+
+
+
+                // Crear un Intent para abrir la actividad CarritoCompras
+                Intent intent = new Intent(ProductosPostres.this, CarritoCompras.class);
+
+                // Agregar los datos del helado como extras en el Intent
+                intent.putExtra("nombreProducto", txtNombreProducto.getText().toString());
+                intent.putExtra("descripcionProducto", txtDescProducto.getText().toString());
+                intent.putExtra("precioProducto", Double.parseDouble(txtPrecioProducto.getText().toString()));
+                // Iniciar la actividad CarritoCompras
+                startActivity(intent);
             }
         });
 

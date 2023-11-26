@@ -51,16 +51,16 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="100dp"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="359dp"
+        android:layout_marginBottom="370dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_columnSpan="1"
         app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_rowSpan="1">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
 
         <!-- Contenedor principal con ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -123,8 +123,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/color_principal"
-                android:onClick="irACarritoCompras"
                 android:text="@string/boton_comprar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -139,13 +137,16 @@
         android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_marginStart="47dp"
         android:layout_marginTop="300dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="120dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_columnSpan="1"
-        app:layout_constraintTop_toBottomOf="@+id/layoutHeader"
-        app:layout_rowSpan="1"
-        tools:layout_editor_absoluteX="229dp">
+        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardViewHeladoFrutilla"
+        app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
 
         <!-- Contenedor principal con ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -227,10 +228,9 @@
         android:layout_marginTop="100dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_columnSpan="1"
+
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_rowSpan="1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Contenedor principal con ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -293,8 +293,6 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/color_principal"
-                android:onClick="irACarritoCompras"
                 android:text="@string/boton_comprar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -320,10 +318,8 @@
         android:layout_marginTop="350dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_columnSpan="1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_rowSpan="1">
+        app:layout_constraintTop_toTopOf="parent">
 
         <!-- Contenedor principal con ConstraintLayout -->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -386,8 +382,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/color_principal"
-                android:onClick="irACarritoCompras"
+
                 android:text="@string/boton_comprar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
