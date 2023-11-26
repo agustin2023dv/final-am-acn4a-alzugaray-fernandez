@@ -8,6 +8,18 @@
     android:layout_height="match_parent"
     tools:context=".UserDashboard">
 
+    <ImageView
+        android:id="@+id/imageViewProfile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/foto_perfil" />
+
+
+    <Button
+        android:id="@+id/btnCargarImagen"
+        android:layout_width="60dp"
+        android:layout_height="40dp"
+        android:text="Cargar imagen"></Button>
     <TextView
         android:id="@+id/txtDetallesUsuario"
         android:layout_width="wrap_content"
@@ -19,7 +31,7 @@
 
     <Button
         android:id="@+id/btnLogout"
-        android:text="Log out"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></Button>
+        android:layout_height="wrap_content"
+        android:text="Log out"></Button>
 </LinearLayout>
