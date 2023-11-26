@@ -157,4 +157,109 @@
             android:text="@string/boton_comprar" />
     </LinearLayout>
 
+
+    <!-- CardView para Helado de Frutilla -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewHeladoFrutilla"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="330dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_columnSpan="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_rowSpan="1">
+
+        <!-- Contenedor principal con ConstraintLayout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- Imagen -->
+            <ImageView
+                android:id="@+id/imgHeladoFrutilla"
+                android:layout_width="0dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/descripcion_imagen_helado_frutilla"
+                android:scaleType="centerCrop"
+                android:src="@drawable/helado_frutilla"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Nombre del helado -->
+            <TextView
+                android:id="@+id/txtNombreHeladoFrutilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/boton_helado_frutilla"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgHeladoFrutilla" />
+
+            <!-- Descripción del helado -->
+            <TextView
+                android:id="@+id/txtDescripcionHeladoFrutilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/descripcion_helado_frutilla"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtNombreHeladoFrutilla" />
+
+            <!-- Precio del helado -->
+            <TextView
+                android:id="@+id/txtPrecioHeladoFrutilla"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/precio_helado_limon"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDescripcionHeladoFrutilla" />
+
+            <!-- Botón de comprar -->
+            <Button
+                android:id="@+id/btnComprarHeladoFrutilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/color_principal"
+                android:onClick="irACarritoCompras"
+                android:text="@string/boton_comprar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtPrecioHeladoFrutilla" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutFooter"
+        android:layout_width="409dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="696dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

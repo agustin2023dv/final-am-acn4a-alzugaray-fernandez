@@ -34,6 +34,12 @@
     <string name="boton_helado_frutilla">Helado de frutilla</string>
     <string name="descripcion_helado_frutilla">Descripcion helado de frutilla</string>
     <string name="precio_helado_frutilla">1200</string>
+    <string name="descripcion_imagen_helado_frutilla">Helado de frutilla</string>
+
+    <string name="boton_helado_limon">Helado de limon</string>
+    <string name="descripcion_helado_limon">Descripcion helado de limon</string>
+    <string name="precio_helado_limon">1300</string>
+
 
 
 
