@@ -20,36 +20,38 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="120dp">
 
             <!-- Elemento de logo -->
             <ImageView
                 android:id="@+id/logoImageView1"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:src="@drawable/logo"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp"
-                android:src="@drawable/logo" />
+                android:layout_marginBottom="15dp" />
 
             <TextView
                 android:id="@+id/appNameTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp"
                 android:text="Delivery Ya"
                 android:textSize="30sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
 
             <!-- "Inicia sesión para continuar" con margen inferior -->
             <TextView
                 android:id="@+id/instructionTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="35dp"
                 android:text="Inicia sesión para continuar"
-                android:textSize="18sp" />
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35dp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
@@ -57,8 +59,11 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/email"
-                    android:layout_width="match_parent"
-                    android:layout_height="60dp"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_edittext_background"
                     android:hint="@string/placeholder_correo_elecronico" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -71,8 +76,11 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/password"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_edittext_background"
                     android:hint="@string/placeholder_password" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -83,21 +91,28 @@
                 android:layout_height="wrap_content"
                 android:visibility="gone" />
 
+            <!-- Botón de inicio de sesión -->
             <Button
                 android:id="@+id/btnLogin"
+                android:background="@color/color_principal"
+                android:textColor="@color/white"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"
-                android:background="@color/color_principal"
                 android:text="Iniciar Sesión"
-                android:textColor="@color/white" />
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"/>
 
             <TextView
                 android:id="@+id/txtRegistrateAhora"
-                android:layout_width="match_parent"
-                android:layout_height="97dp"
-                android:text="@string/registrarse" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registrarse"
+                android:textSize="18sp"
+                android:clickable="true"
+                android:onClick="registrateAhora"
+                android:background="?android:selectableItemBackground"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"/>
 
         </LinearLayout>
 
