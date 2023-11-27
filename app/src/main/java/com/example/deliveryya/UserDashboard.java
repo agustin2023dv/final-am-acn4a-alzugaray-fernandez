@@ -20,8 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
-import com.squareup.picasso.Picasso;
 
+import com.squareup.picasso.Picasso;
+import com.google.firebase.storage.StorageReference;
 import org.json.JSONObject;
 import org.json.JSONException;
 
@@ -29,6 +30,12 @@ public class UserDashboard extends AppCompatActivity {
 
     ImageView imagenPerfil;
     FirebaseAuth auth;
+
+    StorageReference storageReference;
+    String storage_path = "";
+
+    private static final int COD_SEL_STORAGE= 200;
+    private static final int COD_SEL_IMAGE= 300;
     FirebaseUser usuario;
     Button btnLogout;
     TextView txtDetallesUsuario;
@@ -64,6 +71,10 @@ public class UserDashboard extends AppCompatActivity {
 
 
         imagenPerfil = findViewById(R.id.imageViewProfile);
+        Picasso.get().
+                load("https://thumbs.dreamstime.com/b/hombre-gris-del-placeholder-de-la-foto-persona-gen%C3%A9rica-silueta-en-un-fondo-blanco-144511705.jpg").
+                error(R.mipmap.ic_launcher_round).into(imagenPerfil);
+
         Button btnCambiarFotoPerfil= findViewById(R.id.btnCargarImagen);
 
 

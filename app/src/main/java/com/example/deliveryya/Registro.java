@@ -91,7 +91,7 @@ TextView loginAhora;
                                     finish();
                                 } else {
 
-                                    Toast.makeText(Registro.this, "Authentication failed.",
+                                    Toast.makeText(Registro.this, "Creacion de usuario no exitosa.",
                                             Toast.LENGTH_SHORT).show();
 
                                 }
