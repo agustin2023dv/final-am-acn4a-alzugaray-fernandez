@@ -25,12 +25,25 @@ import androidx.appcompat.app.AlertDialog;
 
 public class MenuOpciones extends AppCompatActivity{
 
+    ImageView helados;
     private ImageView carroCompras;
     private EditText textoBuscador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_opciones);
+
+
+        helados = findViewById(R.id.btn_helados);
+
+        helados.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuOpciones.this,ProductosPostres.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         carroCompras = findViewById(R.id.img_cart);
@@ -55,6 +68,9 @@ public class MenuOpciones extends AppCompatActivity{
             }
         });
     }
+
+
+
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
