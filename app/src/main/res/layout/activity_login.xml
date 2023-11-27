@@ -94,7 +94,7 @@
             <!-- Botón de inicio de sesión -->
             <Button
                 android:id="@+id/btnLogin"
-                android:background="@color/color_principal"
+                android:background="@drawable/rounded_button"
                 android:textColor="@color/white"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
