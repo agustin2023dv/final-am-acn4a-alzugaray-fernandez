@@ -26,8 +26,11 @@
             android:id="@+id/img_burgermenu"
             android:layout_width="25dp"
             android:layout_height="33dp"
-            android:layout_weight="1"
-            android:src="@drawable/burger_menu" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="Burger Menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Space
             android:layout_width="wrap_content"
@@ -124,6 +127,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/boton_comprar"
+                android:backgroundTint="@color/color_principal"
+                android:onClick="irACarritoCompras"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -294,6 +299,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/boton_comprar"
+                android:backgroundTint="@color/color_principal"
+                android:onClick="irACarritoCompras"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -382,7 +389,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
+                android:backgroundTint="@color/color_principal"
+                android:onClick="irACarritoCompras"
                 android:text="@string/boton_comprar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

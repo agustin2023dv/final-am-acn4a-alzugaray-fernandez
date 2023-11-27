@@ -1,6 +1,7 @@
 package com.example.deliveryya;
 
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,8 +10,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import com.example.deliveryya.models.Producto;
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +25,7 @@ public class ProductosPostres extends AppCompatActivity {
     ImageView perfilUsuario ;
 
     private List<Producto> carritoCompras = new ArrayList<>();
+    private String urlMenuHamburguesa;
 
 
     @Override
@@ -30,6 +35,24 @@ public class ProductosPostres extends AppCompatActivity {
 
 
         perfilUsuario = findViewById(R.id.iconoUser);
+
+        ImageView imgBurgerMenu = findViewById(R.id.img_burgermenu);
+
+        urlMenuHamburguesa = getString(R.string.urlMenuHamburguesa);
+        // Cargar la imagen desde la URL
+        Picasso.get().load(urlMenuHamburguesa).into(imgBurgerMenu, new Callback() {
+            @Override
+            public void onSuccess() {
+                // Imagen cargada con éxito
+                imgBurgerMenu.setColorFilter(ContextCompat.getColor(ProductosPostres.this, R.color.color_principal), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                // Manejar errores
+                e.printStackTrace();
+            }
+        });
 
         perfilUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,10 +76,6 @@ public class ProductosPostres extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-
-
-
 
         Button btnComprarHeladoVainilla = findViewById(R.id.btnComprarHeladoVainilla);
         btnComprarHeladoVainilla.setOnClickListener(new View.OnClickListener() {
@@ -107,4 +126,6 @@ public class ProductosPostres extends AppCompatActivity {
         });
 
     }
+
+
 }
