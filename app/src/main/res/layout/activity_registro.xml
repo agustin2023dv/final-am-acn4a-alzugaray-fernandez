@@ -99,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dp"
-                android:background="@color/color_principal"
+                android:backgroundTint="@color/color_principal"
                 android:textColor="@color/white"
                 android:text="Registrarse" />
 
