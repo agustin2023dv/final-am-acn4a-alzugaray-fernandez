@@ -42,7 +42,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvProducto"
         android:layout_width="194dp"
-        android:layout_height="200dp"
+        android:layout_height="220dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="32dp"
@@ -55,7 +55,7 @@
         <LinearLayout
             android:id="@+id/layoutHVainilla"
             android:layout_width="match_parent"
-            android:layout_height="199dp"
+            android:layout_height="219dp"
             android:orientation="vertical"
             android:padding="8dp">
 
@@ -103,7 +103,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/contador_valor_defecto"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:padding="10dp"/>
 
                 <Button
                     android:id="@+id/btnMas"
@@ -136,6 +137,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/precio_total"
+            android:padding="10dp"
             android:textSize="24sp" />
         <Space
             android:layout_width="0dp"
@@ -146,6 +148,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/precio_defecto"
+            android:padding="10dp"
             android:textSize="24sp"
             android:layout_marginBottom="15dp"/>
 
