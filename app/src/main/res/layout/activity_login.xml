@@ -81,9 +81,12 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/custom_edittext_background"
-                    android:hint="@string/placeholder_password" />
+                    android:hint="@string/placeholder_password"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
+
 
             <ProgressBar
                 android:id="@+id/progressBarLogin"
@@ -95,6 +98,7 @@
             <Button
                 android:id="@+id/btnLogin"
                 android:background="@drawable/rounded_button"
+                android:backgroundTint="@color/color_principal"
                 android:textColor="@color/white"
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
