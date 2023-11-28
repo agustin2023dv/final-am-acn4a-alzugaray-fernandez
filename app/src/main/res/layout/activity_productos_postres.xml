@@ -23,13 +23,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/iconoUser"
+            android:id="@+id/iconoAtras"
             android:layout_width="25dp"
             android:layout_height="33dp"
+            android:src="@drawable/volver_atras"
             android:layout_weight="1"
-            android:src="@drawable/user">
-
-        </ImageView>
+            android:layout_marginBottom="16dp"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -392,5 +391,47 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtPrecioHeladoFrutilla" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
+
+    <!-- Footer -->
+
+    <LinearLayout
+        android:id="@+id/layoutPrecioTotal"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#F3D6D6"
+        android:background="#F3D6D6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHeladoFrutilla">
+
+        <TextView
+            android:id="@+id/txtPrecioTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Usuario: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"/>
+
+        <ImageView
+            android:id="@+id/iconoUser"
+            android:layout_width="25dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:src="@drawable/user"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp">
+        </ImageView>
+
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

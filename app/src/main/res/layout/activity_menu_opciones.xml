@@ -23,8 +23,7 @@
         <ImageView
             android:id="@+id/img_burgermenu"
             android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:layout_width="15dp"
+            android:layout_width="25dp"
             android:layout_height="33dp"
             android:layout_weight="1"
             android:contentDescription="Burger Menu"

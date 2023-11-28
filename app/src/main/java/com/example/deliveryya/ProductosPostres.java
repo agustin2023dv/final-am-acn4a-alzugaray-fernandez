@@ -33,9 +33,16 @@ public class ProductosPostres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
 
+        ImageView iconoAtras = findViewById(R.id.iconoAtras);
+        iconoAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
+            }
+        });
 
         perfilUsuario = findViewById(R.id.iconoUser);
-
 
 
         perfilUsuario.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +53,6 @@ public class ProductosPostres extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
         ImageView imgCart = findViewById(R.id.img_cart);
