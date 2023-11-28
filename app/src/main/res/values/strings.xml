@@ -10,6 +10,7 @@
     <string name="usuario_recien_registrado">Login</string>
     <string name="registrarse">Registrate ahora</string>
 
+    <string name="boton_cargar_imagen">Cargar imagen</string>
 
     <string name="buscador">¿Qué estás buscando?</string>
     <string name="titulo_menu">Ordene su comida aqui</string>

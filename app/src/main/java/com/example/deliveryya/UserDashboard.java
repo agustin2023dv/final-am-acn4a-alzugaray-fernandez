@@ -1,5 +1,6 @@
 package com.example.deliveryya;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -12,30 +13,28 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import android.widget.Button;
-import android.net.Uri;
-import android.util.Log;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.Volley;
 
+import androidx.activity.result.ActivityResultLauncher;
 import com.squareup.picasso.Picasso;
-import com.google.firebase.storage.StorageReference;
-import org.json.JSONObject;
-import org.json.JSONException;
 
 public class UserDashboard extends AppCompatActivity {
 
     ImageView imagenPerfil;
+    private final ActivityResultLauncher<String> pickMedia = registerForActivityResult(
+            new ActivityResultContracts.GetContent(),
+            uri -> {
+                if (uri != null) {
+                    imagenPerfil.setImageURI(uri);
+                } else {
+
+                }
+            }
+    );
+
+
     FirebaseAuth auth;
 
-    StorageReference storageReference;
-    String storage_path = "";
 
-    private static final int COD_SEL_STORAGE= 200;
-    private static final int COD_SEL_IMAGE= 300;
     FirebaseUser usuario;
     Button btnLogout;
     TextView txtDetallesUsuario;
@@ -76,6 +75,16 @@ public class UserDashboard extends AppCompatActivity {
                 error(R.mipmap.ic_launcher_round).into(imagenPerfil);
 
         Button btnCambiarFotoPerfil= findViewById(R.id.btnCargarImagen);
+
+
+        btnCambiarFotoPerfil.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Abre el selector de medios para elegir una imagen
+                pickMedia.launch("image/*");
+            }
+        });
+
 
 
 
