@@ -47,6 +47,17 @@ public class UserDashboard extends AppCompatActivity {
         btnLogout = findViewById(R.id.btnLogout);
         txtDetallesUsuario = findViewById(R.id.txtDetallesUsuario);
 
+
+        ImageView iconoAtras = findViewById(R.id.iconoAtras);
+
+        iconoAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
+            }
+        });
+
         usuario = auth.getCurrentUser();
 
         if(usuario == null){

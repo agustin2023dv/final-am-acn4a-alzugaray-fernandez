@@ -36,23 +36,7 @@ public class ProductosPostres extends AppCompatActivity {
 
         perfilUsuario = findViewById(R.id.iconoUser);
 
-        ImageView imgBurgerMenu = findViewById(R.id.img_burgermenu);
 
-        urlMenuHamburguesa = getString(R.string.urlMenuHamburguesa);
-        // Cargar la imagen desde la URL
-        Picasso.get().load(urlMenuHamburguesa).into(imgBurgerMenu, new Callback() {
-            @Override
-            public void onSuccess() {
-                // Imagen cargada con éxito
-                imgBurgerMenu.setColorFilter(ContextCompat.getColor(ProductosPostres.this, R.color.color_principal), PorterDuff.Mode.SRC_IN);
-            }
-
-            @Override
-            public void onError(Exception e) {
-                // Manejar errores
-                e.printStackTrace();
-            }
-        });
 
         perfilUsuario.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -2,6 +2,7 @@ package com.example.deliveryya;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,16 +23,63 @@ import android.widget.SearchView;
 import android.widget.TableLayout;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.content.ContextCompat;
+
+import com.squareup.picasso.Callback;
+import com.squareup.picasso.Picasso;
 
 public class MenuOpciones extends AppCompatActivity{
 
     ImageView helados;
     private ImageView carroCompras;
     private EditText textoBuscador;
+    private String urlMenuHamburguesa;
+    ImageView perfilUsuario ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_opciones);
+
+        perfilUsuario = findViewById(R.id.iconoUser);
+
+
+
+        perfilUsuario.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MenuOpciones.this, UserDashboard.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+
+        ImageView imgBurgerMenu = findViewById(R.id.img_burgermenu);
+
+        urlMenuHamburguesa = getString(R.string.urlMenuHamburguesa);
+        // Cargar la imagen desde la URL
+        Picasso.get().load(urlMenuHamburguesa).into(imgBurgerMenu, new Callback() {
+            @Override
+            public void onSuccess() {
+                // Imagen cargada con éxito
+                imgBurgerMenu.setColorFilter(ContextCompat.getColor(MenuOpciones.this, R.color.black), PorterDuff.Mode.SRC_IN);
+            }
+
+            @Override
+            public void onError(Exception e) {
+                // Manejar errores
+                e.printStackTrace();
+            }
+        });
+        imgBurgerMenu.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "Función en desarrollo", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        textoBuscador = findViewById(R.id.etBuscador);
 
 
         helados = findViewById(R.id.btn_helados);

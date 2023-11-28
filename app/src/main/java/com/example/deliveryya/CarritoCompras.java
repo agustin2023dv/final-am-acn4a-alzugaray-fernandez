@@ -31,8 +31,6 @@ public class CarritoCompras extends AppCompatActivity {
             public void onClick(View v) {
 
 
-
-
                 onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
             }
         });

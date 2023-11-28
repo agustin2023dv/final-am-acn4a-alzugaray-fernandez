@@ -23,14 +23,13 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_burgermenu"
+            android:id="@+id/iconoUser"
             android:layout_width="25dp"
             android:layout_height="33dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="Burger Menu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_weight="1"
+            android:src="@drawable/user">
+
+        </ImageView>
 
         <Space
             android:layout_width="wrap_content"
@@ -46,8 +45,7 @@
 
     </LinearLayout>
 
-
-    <!-- Card para Helado de Vainilla -->
+    <!-- Card para Helado de Chocolate-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoChocolate"
@@ -60,7 +58,6 @@
         android:layout_marginBottom="370dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -137,6 +134,7 @@
 
     </androidx.cardview.widget.CardView>
 
+    <!-- CardView para Helado de Limón -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoLimon"
         android:layout_width="150dp"
@@ -148,7 +146,6 @@
         android:layout_marginBottom="120dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardViewHeladoFrutilla"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -224,6 +221,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- CardView para Helado de Vainilla-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoVainilla"
         android:layout_width="150dp"
@@ -310,11 +308,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- CardView para Helado de Chocolate -->
-
-
     <!-- CardView para Helado de Frutilla -->
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoFrutilla"
@@ -398,33 +392,5 @@
                 app:layout_constraintTop_toBottomOf="@+id/txtPrecioHeladoFrutilla" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
-    <!-- CardView para Helado de Limón -->
-
-
-    <LinearLayout
-        android:id="@+id/layoutFooter"
-        android:layout_width="409dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="690dp"
-        android:layout_marginEnd="8dp"
-        android:background="#F3E1E1"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <ImageView
-            android:id="@+id/iconoUser"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/user">
-
-        </ImageView>
-
-    </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -22,10 +22,14 @@
 
         <ImageView
             android:id="@+id/img_burgermenu"
-            android:layout_width="25dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_width="15dp"
             android:layout_height="33dp"
             android:layout_weight="1"
-            android:src="@drawable/burger_menu" />
+            android:contentDescription="Burger Menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Space
             android:layout_width="wrap_content"
@@ -213,5 +217,45 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutBuscador" />
 
+    <!-- Footer -->
 
+    <LinearLayout
+        android:id="@+id/layoutPrecioTotal"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#F3D6D6"
+        android:background="#F3D6D6"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutCategorias">
+
+        <TextView
+            android:id="@+id/txtPrecioTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Usuario: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"/>
+
+        <ImageView
+            android:id="@+id/iconoUser"
+            android:layout_width="25dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:src="@drawable/user"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp">
+        </ImageView>
+
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
