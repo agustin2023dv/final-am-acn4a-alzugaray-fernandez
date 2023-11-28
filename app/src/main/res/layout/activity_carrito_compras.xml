@@ -42,11 +42,11 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cvProducto"
         android:layout_width="194dp"
-        android:layout_height="179dp"
+        android:layout_height="200dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="120dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/layoutPrecioTotal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -55,7 +55,7 @@
         <LinearLayout
             android:id="@+id/layoutHVainilla"
             android:layout_width="match_parent"
-            android:layout_height="178dp"
+            android:layout_height="199dp"
             android:orientation="vertical"
             android:padding="8dp">
 
@@ -63,6 +63,7 @@
                 android:id="@+id/txtNombreProducto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Nombre del Producto"
                 android:textSize="24sp" />
 
@@ -70,6 +71,7 @@
                 android:id="@+id/txtDescripcionProducto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="Descripción del Producto"
                 android:textSize="14sp" />
 
@@ -77,6 +79,7 @@
                 android:id="@+id/txtPrecioProducto"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:text="@string/precio_defecto"
                 android:textSize="24sp" />
 
@@ -84,6 +87,7 @@
                 android:id="@+id/layoutCantidades"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="center"
                 android:layout_gravity="center_vertical"
                 android:orientation="horizontal">
 
@@ -153,9 +157,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutPrecioTotal">
 
         <Button
             android:layout_width="150dp"
