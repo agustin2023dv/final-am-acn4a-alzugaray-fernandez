@@ -5,6 +5,8 @@
     <string name="boton_continuar">Continuar</string>
 
 
+    <string name="placeholder_nombre">Nombre</string>
+    <string name="placeholder_apellido">Apellido</string>
     <string name="placeholder_correo_elecronico">Email</string>
     <string name="placeholder_password">Contraseña</string>
     <string name="usuario_recien_registrado">Login</string>

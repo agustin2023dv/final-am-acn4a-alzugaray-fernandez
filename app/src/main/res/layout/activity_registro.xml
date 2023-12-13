@@ -25,6 +25,36 @@
             android:layout_marginTop="120dp">
 
             <!-- Elemento de logo -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputNombre"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_edittext_background"
+                    android:hint="@string/placeholder_nombre" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtInputApellido"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/custom_edittext_background"
+                    android:hint="@string/placeholder_apellido" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <ImageView
                 android:id="@+id/logoImageView1"
                 android:layout_width="100dp"
@@ -54,6 +84,8 @@
                 android:layout_marginBottom="35dp" />
 
             <!-- Email -->
+
+            <!-- Contraseña -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -69,7 +101,6 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- Contraseña -->
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
@@ -103,15 +134,15 @@
 
             <TextView
                 android:id="@+id/txtLoginAhora"
-                android:text="@string/usuario_recien_registrado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="18sp"
+                android:layout_width="74dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="15dp"
+                android:background="?android:selectableItemBackground"
                 android:clickable="true"
                 android:onClick="loginAhora"
-                android:background="?android:selectableItemBackground"
-                android:layout_gravity="center"
-                android:layout_marginBottom="15dp"/>
+                android:text="@string/usuario_recien_registrado"
+                android:textSize="18sp" />
 
         </LinearLayout>
 

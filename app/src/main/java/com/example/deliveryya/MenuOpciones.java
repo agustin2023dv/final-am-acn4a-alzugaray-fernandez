@@ -8,20 +8,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-import android.content.DialogInterface;
-import android.content.Intent;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
-
-import android.widget.SearchView;
-import android.widget.TableLayout;
-
-import androidx.appcompat.app.AlertDialog;
+import com.google.firebase.storage.FirebaseStorage;
 
 public class MenuOpciones extends AppCompatActivity{
 
@@ -30,8 +21,10 @@ public class MenuOpciones extends AppCompatActivity{
     private EditText textoBuscador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_opciones);
+        setContentView(R.layout.activity_opciones_tipos_comida);
+
 
 
         helados = findViewById(R.id.btn_helados);

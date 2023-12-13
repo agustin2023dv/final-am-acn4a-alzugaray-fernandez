@@ -12,7 +12,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
-import com.example.deliveryya.models.Producto;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
@@ -24,7 +23,7 @@ public class ProductosPostres extends AppCompatActivity {
 
     ImageView perfilUsuario ;
 
-    private List<Producto> carritoCompras = new ArrayList<>();
+
     private String urlMenuHamburguesa;
 
 
