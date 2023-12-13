@@ -23,14 +23,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/img_burgermenu"
+            android:id="@+id/iconoAtras"
             android:layout_width="25dp"
             android:layout_height="33dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
-            android:contentDescription="Burger Menu"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:src="@drawable/volver_atras"
+            android:layout_weight="1"
+            android:layout_marginBottom="16dp"/>
 
         <Space
             android:layout_width="wrap_content"
@@ -46,8 +44,7 @@
 
     </LinearLayout>
 
-
-    <!-- Card para Helado de Vainilla -->
+    <!-- Card para Helado de Chocolate-->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoChocolate"
@@ -60,7 +57,6 @@
         android:layout_marginBottom="370dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -137,6 +133,7 @@
 
     </androidx.cardview.widget.CardView>
 
+    <!-- CardView para Helado de Limón -->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoLimon"
         android:layout_width="150dp"
@@ -148,7 +145,6 @@
         android:layout_marginBottom="120dp"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/layoutFooter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/cardViewHeladoFrutilla"
         app:layout_constraintTop_toBottomOf="@+id/layoutHeader">
@@ -224,6 +220,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
+    <!-- CardView para Helado de Vainilla-->
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoVainilla"
         android:layout_width="150dp"
@@ -310,11 +307,7 @@
 
     </androidx.cardview.widget.CardView>
 
-    <!-- CardView para Helado de Chocolate -->
-
-
     <!-- CardView para Helado de Frutilla -->
-
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewHeladoFrutilla"
@@ -399,32 +392,46 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
 
-    <!-- CardView para Helado de Limón -->
-
+    <!-- Footer -->
 
     <LinearLayout
-        android:id="@+id/layoutFooter"
-        android:layout_width="409dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="690dp"
-        android:layout_marginEnd="8dp"
-        android:background="#F3E1E1"
+        android:id="@+id/layoutPrecioTotal"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#F3D6D6"
+        android:background="#F3D6D6"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/cardViewHeladoFrutilla">
 
+        <TextView
+            android:id="@+id/txtPrecioTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="   Usuario: "
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="32dp"/>
 
         <ImageView
             android:id="@+id/iconoUser"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:src="@drawable/user">
-
+            android:layout_width="25dp"
+            android:layout_height="33dp"
+            android:layout_weight="1"
+            android:src="@drawable/user"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp">
         </ImageView>
 
-    </LinearLayout>
 
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

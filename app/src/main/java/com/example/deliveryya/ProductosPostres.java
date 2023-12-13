@@ -32,26 +32,17 @@ public class ProductosPostres extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
 
+        ImageView iconoAtras = findViewById(R.id.iconoAtras);
+        iconoAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
+            }
+        });
 
         perfilUsuario = findViewById(R.id.iconoUser);
 
-        ImageView imgBurgerMenu = findViewById(R.id.img_burgermenu);
-
-        urlMenuHamburguesa = getString(R.string.urlMenuHamburguesa);
-        // Cargar la imagen desde la URL
-        Picasso.get().load(urlMenuHamburguesa).into(imgBurgerMenu, new Callback() {
-            @Override
-            public void onSuccess() {
-                // Imagen cargada con éxito
-                imgBurgerMenu.setColorFilter(ContextCompat.getColor(ProductosPostres.this, R.color.color_principal), PorterDuff.Mode.SRC_IN);
-            }
-
-            @Override
-            public void onError(Exception e) {
-                // Manejar errores
-                e.printStackTrace();
-            }
-        });
 
         perfilUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,7 +52,6 @@ public class ProductosPostres extends AppCompatActivity {
                 finish();
             }
         });
-
 
 
         ImageView imgCart = findViewById(R.id.img_cart);

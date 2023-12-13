@@ -112,7 +112,9 @@
                     android:layout_gravity="center"
                     android:layout_marginBottom="15dp"
                     android:background="@drawable/custom_edittext_background"
-                    android:hint="@string/placeholder_password" />
+                    android:hint="@string/placeholder_password"
+                    android:inputType="textPassword"
+                    app:passwordToggleEnabled="true" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -128,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginBottom="15dp"
-                android:background="@color/color_principal"
+                android:backgroundTint="@color/color_principal"
                 android:textColor="@color/white"
                 android:text="Registrarse" />
 

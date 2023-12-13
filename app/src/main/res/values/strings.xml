@@ -36,12 +36,12 @@
 
     <!-- POSTRES -->
     <string name="boton_helado_vainilla">Helado de vainilla</string>
-    <string name="descripcion_helado_vainilla">Descripcion helado de vainilla</string>
+    <string name="descripcion_helado_vainilla">Elegancia en cada bocado, un kilo de suavidad atemporal.</string>
     <string name="precio_helado_vainilla">1000</string>
     <string name="descripcion_imagen_helado_vainilla">Helado de vainilla</string>
 
     <string name="boton_helado_chocolate">Helado de chocolate</string>
-    <string name="descripcion_helado_chocolate">Descripcion helado de chocolate</string>
+    <string name="descripcion_helado_chocolate">Indulgencia en cada cucharada, un kilo de suave chocolate.</string>
     <string name="precio_helado_chocolate">1300</string>
     <string name="descripcion_imagen_helado_chocolate">Helado de chocolate</string>
 
@@ -51,12 +51,12 @@
 
 
     <string name="boton_helado_frutilla">Helado de frutilla</string>
-    <string name="descripcion_helado_frutilla">Descripcion helado de frutilla</string>
+    <string name="descripcion_helado_frutilla">Un kilo de pura frescura frutal.</string>
     <string name="precio_helado_frutilla">1200</string>
     <string name="descripcion_imagen_helado_frutilla">Helado de frutilla</string>
 
     <string name="boton_helado_limon">Helado de limon</string>
-    <string name="descripcion_helado_limon">Descripcion helado de limon</string>
+    <string name="descripcion_helado_limon">Un kilo de explosión cítrica refrescante.</string>
     <string name="precio_helado_limon">1300</string>
     <string name="descripcion_imagen_helado_limon">Helado de limon</string>
 
