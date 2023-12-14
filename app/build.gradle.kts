@@ -43,6 +43,7 @@ dependencies {
     implementation("com.android.volley:volley:1.2.1")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.squareup.picasso:picasso:2.71828")
+
     implementation ("com.google.firebase:firebase-storage:20.3.0")
 
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
@@ -54,11 +55,13 @@ dependencies {
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
     implementation("com.google.firebase:firebase-auth:22.3.0")
-    implementation("com.google.firebase:firebase-storage:20.3.0")
+
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
 
     testImplementation("junit:junit:4.13.2")
+
+    implementation("com.google.firebase:firebase-bom:32.7.0")
 
     implementation ("org.jetbrains.kotlin:kotlin-stdlib:1.8.22")
     implementation ("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.22")

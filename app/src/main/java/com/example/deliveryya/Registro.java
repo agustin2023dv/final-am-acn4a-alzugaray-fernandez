@@ -111,6 +111,7 @@ public class Registro extends AppCompatActivity {
                                         Toast.makeText(Registro.this, "Se ha registrado correctamente",
                                                 Toast.LENGTH_SHORT).show();
 
+                                        mAuth.getCurrentUser().sendEmailVerification();
                                         // Obtener una referencia a la base de datos de Firebase
                                         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
