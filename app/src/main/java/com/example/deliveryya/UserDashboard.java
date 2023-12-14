@@ -18,11 +18,14 @@ import com.squareup.picasso.Picasso;
 
 public class UserDashboard extends AppCompatActivity {
 
+    // Inicializa una instancia de Firestore.
     FirebaseFirestore db = FirebaseFirestore.getInstance();
+
+    // Obtiene el ID del usuario actualmente autenticado.
     String userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-
     ImageView imagenPerfil;
+
     // Inicializa el ActivityResultLauncher para elegir una imagen de la galería.
     private final ActivityResultLauncher<String> pickMedia = registerForActivityResult(
             new ActivityResultContracts.GetContent(),
@@ -40,49 +43,36 @@ public class UserDashboard extends AppCompatActivity {
     Button btnLogout;
     TextView txtDetallesUsuario;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_dashboard);
 
-
-
-
+        // Realiza una consulta en Firestore para obtener los detalles del usuario actual.
         db.collection("usuario")
                 .whereEqualTo("uid", userID)
                 .get()
                 .addOnSuccessListener(queryDocumentSnapshots -> {
                     if (!queryDocumentSnapshots.isEmpty()) {
-                        // Se encontró al menos un documento con el ID de usuario actual.
-                        // Supongamos que solo hay uno, ya que se basa en el ID de usuario.
+                        // Se encontró  un documento con el ID de usuario actual.
+
+
+                        // Obtiene el nombre y el apellido del usuario desde Firestore.
                         String nombre = queryDocumentSnapshots.getDocuments().get(0).getString("nombre");
                         String apellido = queryDocumentSnapshots.getDocuments().get(0).getString("apellido");
 
-
-                        // Mostrar el nombre en el TextView con el ID txtNombreStorage.
+                        // Mostrar el nombre y el apellido en los TextView correspondientes.
                         TextView txtNombreStorage = findViewById(R.id.txtNombreStorage);
                         TextView txtApellidoStorage = findViewById(R.id.txtApellidoStorage);
                         txtNombreStorage.setText(nombre);
                         txtApellidoStorage.setText(apellido);
-
                     }
                 })
                 .addOnFailureListener(e -> {
-                    // Manejar errores aquí si es necesario.
+                    //falta agregar manejo de errores
                 });
 
-
-
-
-
-
-
-
-
-
-
+        // Inicializa FirebaseAuth y obtiene el usuario actualmente autenticado.
         auth = FirebaseAuth.getInstance();
         btnLogout = findViewById(R.id.btnLogout);
         txtDetallesUsuario = findViewById(R.id.txtDetallesUsuario);

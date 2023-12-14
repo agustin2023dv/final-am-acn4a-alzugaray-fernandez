@@ -1,18 +1,18 @@
 package com.example.deliveryya.models;
 
-public class CUsuario {
+public class Usuario {
 
     private String nombre;
     private String apellido;
     private String email;
 
-    public CUsuario() {
+    public Usuario() {
         nombre = "";
         apellido = "";
         email = "";
     }
 
-    public CUsuario(String nombre, String apellido, String email) {
+    public Usuario(String nombre, String apellido, String email) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
