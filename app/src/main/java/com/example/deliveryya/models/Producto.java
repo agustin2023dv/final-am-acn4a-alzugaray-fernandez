@@ -1,6 +1,6 @@
 package com.example.deliveryya.models;
 
-public class CProducto {
+public class Producto {
     private String nombre;
     private int id;
     private String imagen;
@@ -8,8 +8,8 @@ public class CProducto {
 
     // Constructor
 
-    public CProducto(){};
-    public CProducto(String nombre, int id, String imagen, double precio) {
+    public Producto(){};
+    public Producto(String nombre, int id, String imagen, double precio) {
         this.nombre = nombre;
         this.id = id;
         this.imagen = imagen;

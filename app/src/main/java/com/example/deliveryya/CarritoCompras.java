@@ -69,8 +69,8 @@ public class CarritoCompras extends AppCompatActivity {
 
 
 
-        // Manejar clic en el botón "-"
-        btnMenos.setOnClickListener(new View.OnClickListener() {
+        // Manejar click en el botón "-"
+      /*  btnMenos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // Reducir la cantidad en 1 si es mayor que 0
@@ -86,7 +86,31 @@ public class CarritoCompras extends AppCompatActivity {
                     txtPrecioTotal.setText(String.valueOf(precioTotal));
                 }
             }
+        });*/
+
+
+
+        // Manejar click en el botón "-"
+        btnMenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Verificar si la cantidad es mayor que 0 antes de reducirla
+                if (cantidadHVainilla > 0) {
+                    cantidadHVainilla--;
+                    txtCantidadHVainilla.setText(String.valueOf(cantidadHVainilla));
+                    precioTotal -= precioProducto;
+                    // Asegurarte de que el precio total no sea menor que 0
+                    if (precioTotal < 0) {
+                        precioTotal = 0;
+                    }
+                    txtPrecioTotal.setText(String.valueOf(precioTotal));
+                }
+            }
         });
+
+
+
+
 
         // Manejar clic en el botón "+"
         btnMas.setOnClickListener(new View.OnClickListener() {

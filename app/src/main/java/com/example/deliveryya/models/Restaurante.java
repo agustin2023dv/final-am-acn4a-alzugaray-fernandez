@@ -3,17 +3,17 @@ package com.example.deliveryya.models;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CRestaurante {
+public class Restaurante {
     private String nombre;
     private int id;
     private String direccion;
     private String imagen;
-    private List<CProducto> listaProductos;
+    private List<Producto> listaProductos;
 
     // Constructor
-    public CRestaurante(){};
-    public CRestaurante(String nombre, int id,
-                        String direccion, String imagen) {
+    public Restaurante(){};
+    public Restaurante(String nombre, int id,
+                       String direccion, String imagen) {
         this.nombre = nombre;
         this.id = id;
         this.direccion = direccion;
@@ -54,21 +54,21 @@ public class CRestaurante {
         this.imagen = imagen;
     }
 
-    public List<CProducto> getListaProductos() {
+    public List<Producto> getListaProductos() {
         return listaProductos;
     }
 
-    public void setListaProductos(List<CProducto> listaProductos) {
+    public void setListaProductos(List<Producto> listaProductos) {
         this.listaProductos = listaProductos;
     }
 
     // Método para agregar un producto a la lista de productos del restaurante
-    public void agregarProducto(CProducto producto) {
+    public void agregarProducto(Producto producto) {
         this.listaProductos.add(producto);
     }
 
     // Método para eliminar un producto de la lista de productos del restaurante
-    public void eliminarProducto(CProducto producto) {
+    public void eliminarProducto(Producto producto) {
         this.listaProductos.remove(producto);
     }
 }
