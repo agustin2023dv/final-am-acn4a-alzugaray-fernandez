@@ -8,38 +8,24 @@ import android.widget.TextView;
 import android.widget.Button;
 import android.view.View;
 
-
-
 public class CarritoCompras extends AppCompatActivity {
 
     private int cantidadHVainilla = 0; //
     private double precioTotal = 0;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_carrito_compras);
 
-
-
         ImageView iconoAtras = findViewById(R.id.iconoAtras);
 
         iconoAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
                 onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
             }
         });
-
-
-
-
-
-
 
         Button btnMenos = findViewById(R.id.btnMenos);
         Button btnMas = findViewById(R.id.btnMas);
@@ -67,29 +53,6 @@ public class CarritoCompras extends AppCompatActivity {
         precioTotal += precioProducto;
         txtPrecioTotal.setText(String.valueOf(precioTotal));
 
-
-
-        // Manejar click en el botón "-"
-      /*  btnMenos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Reducir la cantidad en 1 si es mayor que 0
-                if (cantidadHVainilla > 0) {
-                    cantidadHVainilla--;
-                    txtCantidadHVainilla.setText(String.valueOf(cantidadHVainilla));
-                    precioTotal -= precioProducto;
-                    txtPrecioTotal.setText(String.valueOf(precioTotal));;
-                }
-                else {
-                    cantidadHVainilla = 0;
-                    precioTotal -= precioProducto;
-                    txtPrecioTotal.setText(String.valueOf(precioTotal));
-                }
-            }
-        });*/
-
-
-
         // Manejar click en el botón "-"
         btnMenos.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,10 +71,6 @@ public class CarritoCompras extends AppCompatActivity {
             }
         });
 
-
-
-
-
         // Manejar clic en el botón "+"
         btnMas.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,12 +82,7 @@ public class CarritoCompras extends AppCompatActivity {
                 txtPrecioTotal.setText(String.valueOf(precioTotal));
             }
         });
-
-
-
     }
-
-
 }
 
 

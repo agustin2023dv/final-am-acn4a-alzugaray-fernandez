@@ -19,12 +19,15 @@ import com.squareup.picasso.Picasso;
 public class MenuOpciones extends AppCompatActivity{
 
     ImageView helados;
+    ImageView postres;
+    ImageView pizzas;
+    ImageView panaderias;
+    ImageView parrillas;
+    ImageView hamburguesas;
     private ImageView carroCompras;
     private EditText textoBuscador;
 
     ImageView usuario;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +46,18 @@ public class MenuOpciones extends AppCompatActivity{
         }
     });
 
-
         // Enlazamos la variable 'helados' con el botón de helados en la interfaz.
         helados = findViewById(R.id.btn_helados);
+        // Enlazamos la variable 'postres' con el botón de postres en la interfaz.
+        postres = findViewById(R.id.btn_postres);
+        // Enlazamos la variable 'pizzas' con el botón de pizzas en la interfaz.
+        pizzas = findViewById(R.id.btn_pizzas);
+        // Enlazamos la variable 'panaderias' con el botón de panaderias en la interfaz.
+        panaderias = findViewById(R.id.btn_panaderias);
+        // Enlazamos la variable 'parrillas' con el botón de parrillas en la interfaz.
+        parrillas = findViewById(R.id.btn_parrillas);
+        // Enlazamos la variable 'hamburguesas' con el botón de hamburguesas en la interfaz.
+        hamburguesas = findViewById(R.id.btn_hamburguesa);
 
         // Configuramos un listener para el botón de helados.
         helados.setOnClickListener(new View.OnClickListener() {
@@ -58,6 +70,32 @@ public class MenuOpciones extends AppCompatActivity{
             }
         });
 
+        postres.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "¡En este momento no hay postres disponibles!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        pizzas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "¡En este momento no hay pizzas disponibles!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        panaderias.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "¡En este momento no hay panaderias disponibles!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        parrillas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "¡En este momento no hay parrillas disponibles!", Toast.LENGTH_SHORT).show();
+            }
+        });
+        hamburguesas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(), "¡En este momento no hay hamburguesas disponibles!", Toast.LENGTH_SHORT).show();
+            }
+        });
         // Enlazamos la variable 'carroCompras' con la imagen del carro de compras en la interfaz.
         carroCompras = findViewById(R.id.img_cart);
 
@@ -84,7 +122,6 @@ public class MenuOpciones extends AppCompatActivity{
             }
         });
     }
-
     // Método que maneja la pulsación del botón de retroceso.
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {

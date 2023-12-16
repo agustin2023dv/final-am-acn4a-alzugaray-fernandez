@@ -16,20 +16,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductosPostres extends AppCompatActivity {
-
     ImageView perfilUsuario;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_productos_postres);
 
-        // Obtener una referencia al botón de retroceso y agregar un OnClickListener para simular el comportamiento de retroceso
+        // simular el comportamiento de retroceso
         ImageView iconoAtras = findViewById(R.id.iconoAtras);
         iconoAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed(); // Llama al método onBackPressed para simular el comportamiento de retroceso
+                onBackPressed();
             }
         });
 
@@ -86,7 +84,7 @@ public class ProductosPostres extends AppCompatActivity {
             }
         });
 
-        // Agregar un OnClickListener al botón de compra de Helado de Chocolate
+        // Helado de Chocolate
         btnComprarHeladoChocolate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,7 +109,7 @@ public class ProductosPostres extends AppCompatActivity {
 
             }
         });
-        // Agregar un OnClickListener al botón de compra de Helado de Frutilla
+        // Helado de Frutilla
         btnComprarHeladoFrutilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +133,7 @@ public class ProductosPostres extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        // Agregar un OnClickListener al botón de compra de Helado de Limon
+        // Helado de Limon
         btnComprarHeladoLimon.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
