@@ -58,11 +58,15 @@ public class ProductosPostres extends AppCompatActivity {
         // Obtener una referencia a los botones de compra para los productos
         Button btnComprarHeladoVainilla = findViewById(R.id.btnComprarHeladoVainilla);
         Button btnComprarHeladoChocolate = findViewById(R.id.btnComprarHeladoChocolate);
+        Button btnComprarHeladoFrutilla = findViewById(R.id.btnComprarHeladoFrutilla);
+        Button btnComprarHeladoLimon = findViewById(R.id.btnComprarHeladoLimon);
 
         // Agregar un OnClickListener al botón de compra de Helado de Vainilla
         btnComprarHeladoVainilla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(ProductosPostres.this,
+                        "Has agregado Helado de Vainilla al carrito de compra", Toast.LENGTH_SHORT).show();
                 // Obtener referencias a los elementos de información del producto
                 TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoVainilla);
                 TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoVainilla);
@@ -88,7 +92,73 @@ public class ProductosPostres extends AppCompatActivity {
             public void onClick(View v) {
                 Toast.makeText(ProductosPostres.this,
                         "Has agregado Helado de Chocolate al carrito de compra", Toast.LENGTH_SHORT).show();
+                // Obtener referencias a los elementos de información del producto
+                TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoChocolate);
+                TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoChocolate);
+                TextView txtPrecioProducto = findViewById(R.id.txtPrecioHeladoChocolate);
+
+                // Crear un Intent para abrir la actividad CarritoCompras
+                Intent intent = new Intent(ProductosPostres.this, CarritoCompras.class);
+
+                // Agregar los datos del helado como extras en el Intent
+                intent.putExtra("nombreProducto", txtNombreProducto.getText().toString());
+                intent.putExtra("descripcionProducto", txtDescProducto.getText().toString());
+                intent.putExtra("precioProducto", Double.parseDouble(txtPrecioProducto.getText().toString()));
+                intent.putExtra("cantidadHVainilla", 1);
+
+                // Iniciar la actividad CarritoCompras
+                startActivity(intent);
+
             }
         });
+        // Agregar un OnClickListener al botón de compra de Helado de Frutilla
+        btnComprarHeladoFrutilla.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ProductosPostres.this,
+                        "Has agregado Helado de Frutilla al carrito de compra", Toast.LENGTH_SHORT).show();
+                // Obtener referencias a los elementos de información del producto
+                TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoFrutilla);
+                TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoFrutilla);
+                TextView txtPrecioProducto = findViewById(R.id.txtPrecioHeladoFrutilla);
+
+                // Crear un Intent para abrir la actividad CarritoCompras
+                Intent intent = new Intent(ProductosPostres.this, CarritoCompras.class);
+
+                // Agregar los datos del helado como extras en el Intent
+                intent.putExtra("nombreProducto", txtNombreProducto.getText().toString());
+                intent.putExtra("descripcionProducto", txtDescProducto.getText().toString());
+                intent.putExtra("precioProducto", Double.parseDouble(txtPrecioProducto.getText().toString()));
+                intent.putExtra("cantidadHVainilla", 1);
+
+                // Iniciar la actividad CarritoCompras
+                startActivity(intent);
+            }
+        });
+        // Agregar un OnClickListener al botón de compra de Helado de Limon
+        btnComprarHeladoLimon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ProductosPostres.this,
+                        "Has agregado Helado de Limon al carrito de compra", Toast.LENGTH_SHORT).show();
+                // Obtener referencias a los elementos de información del producto
+                TextView txtNombreProducto = findViewById(R.id.txtNombreHeladoLimon);
+                TextView txtDescProducto = findViewById(R.id.txtDescripcionHeladoLimon);
+                TextView txtPrecioProducto = findViewById(R.id.txtPrecioHeladoLimon);
+
+                // Crear un Intent para abrir la actividad CarritoCompras
+                Intent intent = new Intent(ProductosPostres.this, CarritoCompras.class);
+
+                // Agregar los datos del helado como extras en el Intent
+                intent.putExtra("nombreProducto", txtNombreProducto.getText().toString());
+                intent.putExtra("descripcionProducto", txtDescProducto.getText().toString());
+                intent.putExtra("precioProducto", Double.parseDouble(txtPrecioProducto.getText().toString()));
+                intent.putExtra("cantidadHVainilla", 1);
+
+                // Iniciar la actividad CarritoCompras
+                startActivity(intent);
+            }
+        });
+
     }
 }
