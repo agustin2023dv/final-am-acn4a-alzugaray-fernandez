@@ -48,6 +48,18 @@ public class UserDashboard extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_dashboard);
 
+        ImageView iconoAtras = findViewById(R.id.iconoAtras);
+
+        iconoAtras.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UserDashboard.this, MenuOpciones.class);
+                startActivity(intent);
+                // Finaliza la actividad actual
+                finish();
+            }
+        });
+
         // Realiza una consulta en Firestore para obtener los detalles del usuario actual.
         db.collection("usuario")
                 .whereEqualTo("uid", userID)

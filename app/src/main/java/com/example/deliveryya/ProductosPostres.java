@@ -27,7 +27,10 @@ public class ProductosPostres extends AppCompatActivity {
         iconoAtras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBackPressed();
+                Intent intent = new Intent(ProductosPostres.this, MenuOpciones.class);
+                startActivity(intent);
+                // Finaliza la actividad actual
+                finish();
             }
         });
 
