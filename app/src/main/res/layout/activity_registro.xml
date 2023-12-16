@@ -22,7 +22,36 @@
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="120dp">
+            android:layout_marginTop="60dp">
+
+            <ImageView
+                android:id="@+id/logoImageView1"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="15dp" />
+
+            <TextView
+                android:id="@+id/appNameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Ya"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp" />
+
+            <!-- "Registro -->
+            <TextView
+                android:id="@+id/instructionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:textSize="18sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="35dp" />
+
 
             <!-- Elemento de logo -->
             <com.google.android.material.textfield.TextInputLayout
@@ -54,34 +83,6 @@
                     android:hint="@string/placeholder_apellido" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <ImageView
-                android:id="@+id/logoImageView1"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:src="@drawable/logo"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp" />
-
-            <TextView
-                android:id="@+id/appNameTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Delivery Ya"
-                android:textSize="30sp"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="10dp" />
-
-            <!-- "Registro -->
-            <TextView
-                android:id="@+id/instructionTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Registro"
-                android:textSize="18sp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="35dp" />
 
             <!-- Email -->
 
@@ -139,6 +140,7 @@
                 android:layout_width="74dp"
                 android:layout_height="48dp"
                 android:layout_gravity="center"
+                android:gravity="center"
                 android:layout_marginBottom="15dp"
                 android:background="?android:selectableItemBackground"
                 android:clickable="true"
