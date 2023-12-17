@@ -10,6 +10,8 @@
     <string name="mail_user">Email:</string>
     <string name="email_usuario">Email</string>
 
+    <string name="titulo_mapa">Ubicacion de restaurantes</string>
+
     <string name="placeholder_nombre">Nombre</string>
     <string name="placeholder_apellido">Apellido</string>
     <string name="placeholder_correo_elecronico">Email</string>
