@@ -58,6 +58,7 @@ dependencies {
 
     implementation("com.google.firebase:firebase-database:20.3.0")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
+    implementation("com.google.android.libraries.maps:maps:3.1.0-beta")
 
     testImplementation("junit:junit:4.13.2")
 
