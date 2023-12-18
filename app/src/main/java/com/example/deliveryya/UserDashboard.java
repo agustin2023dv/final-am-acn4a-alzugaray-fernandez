@@ -10,10 +10,11 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.activity.result.ActivityResultLauncher;
 
 import com.google.firebase.firestore.FirebaseFirestore;
-import com.google.firebase.firestore.ListenerRegistration;
 import com.squareup.picasso.Picasso;
 
 public class UserDashboard extends AppCompatActivity {
@@ -33,7 +34,7 @@ public class UserDashboard extends AppCompatActivity {
                 if (uri != null) {
                     imagenPerfil.setImageURI(uri); // Establece la imagen seleccionada como imagen de perfil.
                 } else {
-                    // Manejar el caso en el que no se seleccionó ninguna imagen.
+                    Toast.makeText(UserDashboard.this,"Por favor selecciona una imagen.",Toast.LENGTH_SHORT).show();
                 }
             }
     );
@@ -81,7 +82,8 @@ public class UserDashboard extends AppCompatActivity {
                     }
                 })
                 .addOnFailureListener(e -> {
-                    //falta agregar manejo de errores
+                    Toast.makeText(UserDashboard.this,"Error al cargar datos del usuario",
+                            Toast.LENGTH_SHORT).show();
                 });
 
         // Inicializa FirebaseAuth y obtiene el usuario actualmente autenticado.
@@ -115,7 +117,8 @@ public class UserDashboard extends AppCompatActivity {
 
         // Carga una imagen de perfil predeterminada usando Picasso en la ImageView.
         Picasso.get()
-                .load("https://thumbs.dreamstime.com/b/hombre-gris-del-placeholder-de-la-foto-persona-gen%C3%A9rica-silueta-en-un-fondo-blanco-144511705.jpg")
+                .load(
+                        "https://thumbs.dreamstime.com/b/hombre-gris-del-placeholder-de-la-foto-persona-gen%C3%A9rica-silueta-en-un-fondo-blanco-144511705.jpg")
                 .error(R.mipmap.ic_launcher_round) // Imagen de error en caso de fallo.
                 .into(imagenPerfil);
 
